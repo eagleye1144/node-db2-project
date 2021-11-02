@@ -18,6 +18,7 @@ router.get('/', async (req, res, next) =>{
 })
 router.get('/:id', checkCarId, async (req, res, next) =>{
     res.json(req.car)
+    next()
 })
 router.post(
     '/',
